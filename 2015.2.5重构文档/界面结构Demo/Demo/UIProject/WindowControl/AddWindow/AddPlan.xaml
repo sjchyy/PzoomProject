@@ -1,0 +1,20 @@
+﻿<Window x:Class="WindowControl.AddWindow.AddPlan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddPlan" Height="300" Width="300">
+    <StackPanel>
+        
+        <Label Content="计划名称:"></Label>
+        <TextBox x:Name="TextBox_PlanName"  />
+        <ListView x:Name="ListView_GroupSource" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header=" 组名称"  x:Name="GridViewColumn_GroupName"/>
+                    <GridViewColumn Header=" 状态"  x:Name="GridViewColumn_State"  />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="添加组" x:Name="Button_AddGroup"   HorizontalAlignment="Left" />
+        
+    </StackPanel>
+</Window>

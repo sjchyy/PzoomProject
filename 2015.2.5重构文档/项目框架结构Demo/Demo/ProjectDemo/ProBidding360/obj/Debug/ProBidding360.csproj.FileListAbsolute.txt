@@ -1,0 +1,11 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\bin\Debug\ProBidding360.exe
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\bin\Debug\ProBidding360.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\MainWindow.baml
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\MainWindow.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\App.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360_MarkupCompile.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.Properties.Resources.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.csproj.GenerateResource.Cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.exe
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.pdb

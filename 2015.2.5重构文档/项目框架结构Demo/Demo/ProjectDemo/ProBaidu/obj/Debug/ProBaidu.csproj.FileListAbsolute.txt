@@ -1,0 +1,11 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\bin\Debug\ProBaidu.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\bin\Debug\ProBaidu.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProjectMain.baml
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProjectMain.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu_MarkupCompile.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.Properties.Resources.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.csproj.GenerateResource.Cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.csprojResolveAssemblyReference.cache

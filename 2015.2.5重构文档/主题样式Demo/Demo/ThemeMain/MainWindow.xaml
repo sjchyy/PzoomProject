@@ -1,0 +1,13 @@
+﻿<Window x:Class="ThemeMain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="clr-namespace:ThemesControl;assembly=ThemesControl"
+          xmlns:theme="clr-namespace:ThemeBase;assembly=ThemeBase"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <control:PLabel VerticalAlignment="Center" HorizontalAlignment="Center"   Content="klasdjkdsflkdsflkdslaklkjasdfkljasdkljfassfd"/>
+        <control:PLabel Content="klasdfjkaskldfklasdklfalksdf"/>
+        <Button Content="确定" x:Name="aButton"  Style="{DynamicResource ButtonStyle}" Width="100" Height="30"/>
+        <Image Source="/ThemeLibrary;component/logo/pzoom_logo_png.png" Stretch="None"></Image>
+    </StackPanel>
+</Window>

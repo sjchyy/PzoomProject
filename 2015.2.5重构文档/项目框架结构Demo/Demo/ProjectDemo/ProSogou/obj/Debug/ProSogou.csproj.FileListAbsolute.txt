@@ -1,0 +1,13 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProSogou.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProSogou.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProInterface.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProInterface.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.csprojResolveAssemblyReference.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProjectMain.baml
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProjectMain.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou_MarkupCompile.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.Properties.Resources.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.csproj.GenerateResource.Cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.pdb

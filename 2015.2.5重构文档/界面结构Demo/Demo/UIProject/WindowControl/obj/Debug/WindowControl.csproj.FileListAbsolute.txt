@@ -1,0 +1,10 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\bin\Debug\WindowControl.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\bin\Debug\WindowControl.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\AddWindow\AddPlan.baml
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\AddWindow\AddPlan.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl_MarkupCompile.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl.Properties.Resources.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl.csproj.GenerateResource.Cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\界面结构Demo\Demo\UIProject\WindowControl\obj\Debug\WindowControl.pdb

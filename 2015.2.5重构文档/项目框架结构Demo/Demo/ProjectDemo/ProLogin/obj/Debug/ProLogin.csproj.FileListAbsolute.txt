@@ -1,0 +1,10 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\bin\Debug\ProLogin.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\bin\Debug\ProLogin.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\WindowLogin.baml
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\WindowLogin.g.cs
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin_MarkupCompile.cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin.Properties.Resources.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin.csproj.GenerateResource.Cache
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProLogin\obj\Debug\ProLogin.pdb

@@ -1,0 +1,11 @@
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ThemeLibrary\bin\Debug\ResourceLibrary.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ThemeLibrary\bin\Debug\ResourceLibrary.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ThemeLibrary\obj\Debug\ResourceLibrary.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ThemeLibrary\obj\Debug\ResourceLibrary.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ThemeLibrary\obj\Debug\ResourceLibrary.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.g.resources
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.dll
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.pdb
+D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResouuceLibrary.csprojResolveAssemblyReference.cache
