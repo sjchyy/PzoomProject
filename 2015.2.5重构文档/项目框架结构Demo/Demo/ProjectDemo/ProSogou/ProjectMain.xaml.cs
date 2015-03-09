@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProInterface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace ProSogou
     /// <summary>
     /// ProjectMain.xaml 的交互逻辑
     /// </summary>
-    public partial class ProjectMain : UserControl
+    public partial class ProjectMain : UserControl,IProjectMain
     {
         public ProjectMain()
         {
@@ -67,5 +68,18 @@ namespace ProSogou
         public event System.ComponentModel.AsyncCompletedEventHandler InitCompleted;
 
         public event System.ComponentModel.ProgressChangedEventHandler InitProgressChanged;
+
+
+        public void InitSettingAsync(ProInterface.Delegate.Setting obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AcceptRoutedEvent(ProInterface.Enum.ERoutedEvent typf, object arg)
+        {
+            throw new NotImplementedException();
+        }
+
+        public event ProInterface.Delegate.SettingChangedEventHandler SettingChanged;
     }
 }

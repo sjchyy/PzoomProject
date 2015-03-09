@@ -21,3 +21,6 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProSogou.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\obj\Debug\ProSogou.csprojResolveAssemblyReference.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProInterface.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSogou\bin\Debug\ProInterface.pdb

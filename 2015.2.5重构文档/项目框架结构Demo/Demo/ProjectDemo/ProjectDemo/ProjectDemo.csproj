@@ -64,7 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands.cs" />
-    <Compile Include="Interface\IProjectMain.cs" />
+    <Compile Include="Common\Assembly.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,6 +106,10 @@
       <Project>{1b501606-cfa5-4e2b-97fd-3c871d5d312e}</Project>
       <Name>ProConverter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProInterface\ProInterface.csproj">
+      <Project>{df45233f-1d42-422f-9c34-bc1296c0930a}</Project>
+      <Name>ProInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProLogin\ProLogin.csproj">
       <Project>{1c2bd9ec-c4f4-4414-9df2-49213b2c6cb4}</Project>
       <Name>ProLogin</Name>
@@ -113,6 +117,10 @@
     <ProjectReference Include="..\ProSogou\ProSogou.csproj">
       <Project>{258d4853-5346-4f86-bb5c-12d986a5d2c2}</Project>
       <Name>ProSogou</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProView\ProView.csproj">
+      <Project>{45d592c4-d568-4538-a571-12ecd661e841}</Project>
+      <Name>ProView</Name>
     </ProjectReference>
     <ProjectReference Include="..\ResourceLibrary\ResouuceLibrary.csproj">
       <Project>{e7518be0-1bb1-4526-bbbc-886b3b259e1d}</Project>

@@ -51,10 +51,13 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProSogou.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ResourceLibrary.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ThemeLibrary.pdb
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\UserWindow.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\MainWindow.baml
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\ProjectDemo.g.resources
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\ProjectDemo.Properties.Resources.resources
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\ProjectDemo.csproj.GenerateResource.Cache
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\ProjectDemo.exe
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\ProjectDemo.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProInterface.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProInterface.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProView.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProView.pdb

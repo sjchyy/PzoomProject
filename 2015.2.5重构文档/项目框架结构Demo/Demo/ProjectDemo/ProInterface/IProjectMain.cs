@@ -1,18 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Windows;
+using ProInterface.Delegate;
+using ProInterface.Enum;
 
 namespace ProInterface
 {
    public  interface IProjectMain
     {
         bool IsBusy { get; set; }
-        void InitSettingAsync(Object obj);
+        void InitSettingAsync(Setting obj);
         void InitSettingAsyncCancel(Object state);
 
+        void AcceptRoutedEvent(ERoutedEvent typf,object arg);
+
+        event SettingChangedEventHandler SettingChanged;
         event AsyncCompletedEventHandler InitCompleted;
         event ProgressChangedEventHandler InitProgressChanged;
       

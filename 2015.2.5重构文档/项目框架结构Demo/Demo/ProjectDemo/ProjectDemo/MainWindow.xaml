@@ -76,7 +76,6 @@
                         </Style>
                     </ListView.ItemContainerStyle>
                 </ListView>
-          
             </Grid>
         </StackPanel>
         <Grid DockPanel.Dock="Bottom">
