@@ -4,12 +4,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border BorderBrush="Blue" Background="Yellow" BorderThickness="1">
+                    <Border BorderBrush="Blue" Background="DimGray" BorderThickness="1">
                         <ContentPresenter/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    
+    <SolidColorBrush x:Key="TextColorBrush">YellowGreen</SolidColorBrush>
+    <SolidColorBrush x:Key="TextBackBrush">Salmon</SolidColorBrush>
 </ResourceDictionary>

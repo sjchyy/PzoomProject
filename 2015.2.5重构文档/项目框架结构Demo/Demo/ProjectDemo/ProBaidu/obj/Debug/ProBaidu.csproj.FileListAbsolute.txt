@@ -9,3 +9,13 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.dll
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.pdb
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.csprojResolveAssemblyReference.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\bin\Debug\ProBaidu.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\bin\Debug\ProBaidu.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProjectMain.baml
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProjectMain.g.cs
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu_MarkupCompile.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.Properties.Resources.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.csproj.GenerateResource.Cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBaidu\obj\Debug\ProBaidu.pdb

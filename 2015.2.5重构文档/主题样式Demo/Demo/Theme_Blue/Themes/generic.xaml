@@ -4,19 +4,28 @@
                       xmlns:theme="clr-namespace:ThemeBase;assembly=ThemeBase"
                     xmlns:local="clr-namespace:Theme_Blue"
                     >
-    <Style  x:Key="{theme:ThemeResourceKey ThemeType= local:Theme_Blue ,ElementType=control:PLabel}" TargetType="{x:Type control:PLabel}">
-        <Setter Property="Background" Value="Gray"/>
-        <Setter Property="Foreground" Value="Blue"/>
-        <Setter Property="FontSize" Value="18"></Setter>
-        <Setter Property="FontWeight" Value="Bold"></Setter>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type control:PLabel}">
-                    <Border Background="{TemplateBinding Background}">
-                        <ContentPresenter />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    <ResourceDictionary.MergedDictionaries>
+      
+        <ResourceDictionary>
+
+            <SolidColorBrush x:Key="TextColorBrush">DarkGreen</SolidColorBrush>
+            <SolidColorBrush x:Key="TextBackBrush">Red</SolidColorBrush>
+            <Style  x:Key="{theme:ThemeResourceKey ThemeType= local:Theme_Blue ,ElementType=control:PLabel}" TargetType="{x:Type control:PLabel}">
+                <Setter Property="Background" Value="{DynamicResource TextBackBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource   TextColorBrush}"/>
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type control:PLabel}">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+  
 </ResourceDictionary>

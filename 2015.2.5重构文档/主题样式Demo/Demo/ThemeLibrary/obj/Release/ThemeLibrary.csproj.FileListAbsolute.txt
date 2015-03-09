@@ -3,3 +3,9 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\主题
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.dll
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.pdb
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\bin\Release\ThemeLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\bin\Release\ThemeLibrary.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.csprojResolveAssemblyReference.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\ThemeLibrary\obj\Release\ThemeLibrary.pdb

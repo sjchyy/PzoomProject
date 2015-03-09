@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WindowControl.AddWindow.AddPlan"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AddPlan" Height="300" Width="300">
+        Title="AddPlan" Height="400" Width="300">
     <StackPanel>
         
         <Label Content="计划名称:"></Label>

@@ -2,3 +2,7 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\bin\Debug\ProConverter.pdb
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\obj\Debug\ProConverter.dll
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\obj\Debug\ProConverter.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\bin\Debug\ProConverter.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\bin\Debug\ProConverter.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\obj\Debug\ProConverter.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProConverter\obj\Debug\ProConverter.pdb

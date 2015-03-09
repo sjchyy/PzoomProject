@@ -4,3 +4,9 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.csproj.GenerateResource.Cache
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.dll
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\bin\Debug\ProSynchronous.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\bin\Debug\ProSynchronous.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.Properties.Resources.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.csproj.GenerateResource.Cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProSynchronous\obj\Debug\ProSynchronous.pdb

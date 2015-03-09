@@ -59,17 +59,17 @@ namespace ThemeMain
              string   file = System.IO.Directory.GetCurrentDirectory() + @"\Theme_Blue.dll";
                 if (System.IO.File.Exists(file))
                 {
-                    System.Reflection.Assembly assembly = System.Reflection.Assembly.LoadFile(file);
+                    //System.Reflection.Assembly assembly = System.Reflection.Assembly.LoadFile(file);
 
-                    if (null != assembly)
-                    {
-                        object obj = assembly.CreateInstance("Theme_Blue.Theme_Blue");
+                    //if (null != assembly)
+                    //{
+                    //    object obj = assembly.CreateInstance("Theme_Blue.Theme_Blue");
 
-                        if (null != obj)
-                        {
-                            StyleManager.ApplicationTheme = obj as Theme;
-                        }
-                    }
+                    //    if (null != obj)
+                    //    {
+                    //        StyleManager.ApplicationTheme = obj as Theme;
+                    //    }
+                    //}
                     ResourceDictionary dict = Application.LoadComponent(new Uri("/Theme_Blue;component/Style/StyleMain.xaml", UriKind.RelativeOrAbsolute)) as ResourceDictionary;
                     if (null != dict)
                     {

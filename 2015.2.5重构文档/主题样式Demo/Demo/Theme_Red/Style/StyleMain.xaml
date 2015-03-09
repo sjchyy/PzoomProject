@@ -11,5 +11,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+    <SolidColorBrush x:Key="TextColorBrush">Salmon</SolidColorBrush> 
+    <SolidColorBrush x:Key="TextBackBrush">YellowGreen</SolidColorBrush>
 </ResourceDictionary>

@@ -1,5 +1,4 @@
-﻿using ProInterface;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +17,7 @@ namespace ProSogou
     /// <summary>
     /// ProjectMain.xaml 的交互逻辑
     /// </summary>
-    public partial class ProjectMain : UserControl,IProjectMain
+    public partial class ProjectMain : UserControl
     {
         public ProjectMain()
         {

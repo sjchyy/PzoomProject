@@ -15,24 +15,35 @@ namespace ThemeMain
     {
         public App()
         {
-            string file = System.IO.Directory.GetCurrentDirectory() + @"\Theme_Red.dll";
+            
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            string file = System.IO.Directory.GetCurrentDirectory() + @"\Theme_Blue.dll";
             if (System.IO.File.Exists(file))
             {
+
+
+
                 System.Reflection.Assembly assembly = System.Reflection.Assembly.LoadFile(file);
                 if (null != assembly)
                 {
-                    object obj = assembly.CreateInstance("Theme_Red.Theme_Red");
+                    object obj = assembly.CreateInstance("Theme_Blue.Theme_Blue");
                     if (null != obj)
                     {
                         StyleManager.ApplicationTheme = obj as Theme;
                     }
                 }
-                App.Current.Resources.Clear();
-                ResourceDictionary dict = Application.LoadComponent(new Uri("/Theme_Red;component/Style/StyleMain.xaml", UriKind.RelativeOrAbsolute)) as ResourceDictionary;
+
+                ResourceDictionary dict = Application.LoadComponent(new Uri("/Theme_Blue;component/Style/StyleMain.xaml", UriKind.RelativeOrAbsolute)) as ResourceDictionary;
                 if (null != dict)
                 {
-                    App.Current.Resources.MergedDictionaries.Add(dict);
+                    //App.Current.Resources.MergedDictionaries.Add(dict);
                 }
+
+
             }
         }
     }

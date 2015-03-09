@@ -9,3 +9,14 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.csproj.GenerateResource.Cache
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.exe
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\bin\Debug\ProBidding360.exe
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\bin\Debug\ProBidding360.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\MainWindow.baml
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\MainWindow.g.cs
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\App.g.cs
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360_MarkupCompile.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.Properties.Resources.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.csproj.GenerateResource.Cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.exe
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProBidding360\obj\Debug\ProBidding360.pdb

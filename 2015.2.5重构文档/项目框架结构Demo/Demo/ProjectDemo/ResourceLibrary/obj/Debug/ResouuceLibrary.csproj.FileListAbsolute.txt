@@ -9,3 +9,8 @@ D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.dll
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.pdb
 D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResouuceLibrary.csprojResolveAssemblyReference.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.pdb

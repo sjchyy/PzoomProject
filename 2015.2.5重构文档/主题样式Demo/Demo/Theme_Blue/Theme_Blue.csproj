@@ -73,6 +73,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Style\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\StyleMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

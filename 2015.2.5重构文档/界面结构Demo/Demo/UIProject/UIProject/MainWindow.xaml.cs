@@ -55,14 +55,8 @@ namespace UIProject
         }
         private void AddGroup(object param)
         {
-           
-            ThreadPool.QueueUserWorkItem(new WaitCallback(delegate{
-               MGroup m = new MGroup() { GroupName = "组名称new", State = "正常" };
-               ObservableCollection<MGroup> source = new ObservableCollection<MGroup>();
-               source.Add(m);
-               plan.GroupSource = source;
-            }));
-           
+
+            plan.GroupSource.Add(new MGroup() { GroupName = "组名称new", State = "正常" });
         }
     }
 }

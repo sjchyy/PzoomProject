@@ -4,17 +4,17 @@
 library
 C#
 .cs
-D:\malangmedia\大师系列设计\品众精准大师\2015.2.5重构文档\主题样式Demo\Demo\Theme_Blue\obj\Release\
+E:\GitProject\PzoomProject\2015.2.5重构文档\主题样式Demo\Demo\Theme_Blue\obj\Release\
 Theme_Blue
 none
 false
 TRACE
 
-2-148962283
+3-1829760378
 
 4-859788354
-12-805182070
-Style\StyleMain.xaml;Themes\generic.xaml;
+122038205993
+Style\Brushes.xaml;Style\StyleMain.xaml;Themes\generic.xaml;
 
 False
 
