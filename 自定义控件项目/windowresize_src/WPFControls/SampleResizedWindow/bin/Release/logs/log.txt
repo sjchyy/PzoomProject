@@ -1,0 +1,2 @@
+2015-03-05 13:58:06,952 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-09 14:01:47,306 [10] INFO  SampleResizedWindow.App: Start

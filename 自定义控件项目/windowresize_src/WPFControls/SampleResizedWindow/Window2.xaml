@@ -1,0 +1,18 @@
+﻿<scr:UWindow x:Class="SampleResizedWindow.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:scr="clr-namespace:UserWindow;assembly=UserWindow"
+        Title="Window2" Height="300" BorderBrush="YellowGreen" Width="300">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Height="50" >
+       <Label Background="Teal" x:Name="User_Header" />
+           <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Top">
+               <Button Content="Min" x:Name="User_MinButton"></Button>
+               <Button Content="Max" x:Name="User_MaxButton"></Button>
+               <Button Content="Clo" x:Name="User_CloButton"></Button>
+            </StackPanel>
+       
+        </Grid>
+        <StackPanel></StackPanel>
+    </DockPanel>
+</scr:UWindow>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="SampleResizedWindow.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Resize Window Exmaple" Height="300" Width="550"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"  Closing="Window_Closing"
+        MinWidth="550" MinHeight="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- Grips -->
+        <!-- Sides -->
+        <Rectangle Grid.Column="0" Grid.Row="1" Name="leftSizeGrip" Fill="Red" />
+        <Rectangle Grid.Column="2" Grid.Row="1" Name="rightSizeGrip" Fill="Red" />
+        <Rectangle Grid.Column="1" Grid.Row="0" Name="topSizeGrip" Fill="Red" />
+        <Rectangle Grid.Column="1" Grid.Row="2" Name="bottomSizeGrip" Fill="Red" />
+        <!-- Corners -->
+        <Rectangle Grid.Column="0" Grid.Row="0" Name="topLeftSizeGrip" Fill="Blue" />
+        <Rectangle Grid.Column="2" Grid.Row="2" Name="bottomRightSizeGrip" Fill="Blue" />
+        <Rectangle Grid.Column="2" Grid.Row="0" Name="topRightSizeGrip" Fill="Blue" />
+        <Rectangle Grid.Column="0" Grid.Row="2" Name="bottomLeftSizeGrip" Fill="Blue" />
+
+        <!-- Content -->
+        <Rectangle x:Name="RectContent" Grid.Row="1" Grid.Column="1" Fill="LightGreen"></Rectangle>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            CONTENT HERE TYPICALLY
+        </Label>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Label Width="300" Background="Yellow" x:Name="windowHeader"/>
+            <Button  Margin="5" x:Name="windowMin" Content=" min" >
+
+            </Button>
+
+            <Button  Margin="5" x:Name="windowMax" Content=" max" >
+
+            </Button>
+            <Button  Margin="5" x:Name="windowClose" Content=" close" >
+             
+            </Button>
+            
+        </StackPanel>
+   
+        <Label  Background="Yellow"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            Application by Derek Bartram (http://www.derek-bartram.co.uk)
+        </Label>
+    </Grid>
+</Window>

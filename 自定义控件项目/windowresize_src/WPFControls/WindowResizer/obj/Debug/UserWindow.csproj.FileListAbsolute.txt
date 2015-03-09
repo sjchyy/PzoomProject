@@ -1,0 +1,9 @@
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\bin\Debug\UserWindow.dll
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\bin\Debug\UserWindow.pdb
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\UserWindow_MarkupCompile.cache
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\UserWindow_MarkupCompile.lref
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\Themes\Generic.baml
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\UserWindow.g.resources
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\UserWindow.dll
+D:\malangmedia\pzoom-client-pro-demo\ControlDemo\windowresize_src\WPFControls\WindowResizer\obj\Debug\UserWindow.pdb
