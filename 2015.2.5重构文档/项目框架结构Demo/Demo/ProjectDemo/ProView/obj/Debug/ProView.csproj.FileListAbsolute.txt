@@ -6,8 +6,10 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProView.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\bin\Debug\ProInterface.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\bin\Debug\ProInterface.pdb
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProView.csprojResolveAssemblyReference.cache
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProjectMain.baml
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProjectMain.g.cs
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProView_MarkupCompile.cache
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProView.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\bin\Debug\ProCommon.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\bin\Debug\ProCommon.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProView\obj\Debug\ProView.csprojResolveAssemblyReference.cache

@@ -102,17 +102,13 @@
       <Project>{e5541cd0-7acf-4655-a912-0c9d369348d9}</Project>
       <Name>ProBaidu</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProConverter\ProConverter.csproj">
-      <Project>{1b501606-cfa5-4e2b-97fd-3c871d5d312e}</Project>
-      <Name>ProConverter</Name>
+    <ProjectReference Include="..\ProCommon\ProCommon.csproj">
+      <Project>{fb56ee6d-0894-4525-af65-8c46718e0176}</Project>
+      <Name>ProCommon</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProInterface\ProInterface.csproj">
       <Project>{df45233f-1d42-422f-9c34-bc1296c0930a}</Project>
       <Name>ProInterface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProLogin\ProLogin.csproj">
-      <Project>{1c2bd9ec-c4f4-4414-9df2-49213b2c6cb4}</Project>
-      <Name>ProLogin</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProSogou\ProSogou.csproj">
       <Project>{258d4853-5346-4f86-bb5c-12d986a5d2c2}</Project>

@@ -40,14 +40,10 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProjectDemo.exe
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProjectDemo.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProBaidu.dll
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProConverter.dll
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProLogin.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProSogou.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ResourceLibrary.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ThemeLibrary.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProBaidu.pdb
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProConverter.pdb
-E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProLogin.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProSogou.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ResourceLibrary.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ThemeLibrary.pdb
@@ -61,3 +57,5 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProInterface.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProView.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProView.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProCommon.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\bin\Debug\ProCommon.pdb

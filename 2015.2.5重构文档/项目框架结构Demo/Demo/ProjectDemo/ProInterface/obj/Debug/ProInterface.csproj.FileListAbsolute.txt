@@ -3,3 +3,5 @@ E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\Proj
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProInterface\obj\Debug\ProInterface.dll
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProInterface\obj\Debug\ProInterface.pdb
 E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProInterface\obj\Debug\ProInterface.csprojResolveAssemblyReference.cache
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProInterface\bin\Debug\ProCommon.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProInterface\bin\Debug\ProCommon.pdb

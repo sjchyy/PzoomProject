@@ -41,3 +41,401 @@
 2015-03-09 19:33:25,126 [ 9] INFO  ProjectDemo.App: Start
 2015-03-09 19:34:52,939 [ 9] INFO  ProjectDemo.App: Start
 2015-03-09 19:35:48,189 [10] INFO  ProjectDemo.App: Start
+2015-03-10 09:11:43,252 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:13:39,897 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:16:11,145 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:17:21,088 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:18:25,932 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:18:56,729 [ 9] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“AccountListView”的控件“System.Windows.Controls.ListView Items.Count:12”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 12 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.Controls.ItemsControl.NavigateByLineInternal(Object startingItem, FocusNavigationDirection direction, FrameworkElement startingElement, ItemNavigateArgs itemNavigateArgs, Boolean shouldFocus, FrameworkElement& container)
+   在 System.Windows.Controls.ItemsControl.NavigateByLine(ItemInfo startingInfo, FrameworkElement startingElement, FocusNavigationDirection direction, ItemNavigateArgs itemNavigateArgs)
+   在 System.Windows.Controls.ItemsControl.NavigateByLine(FocusNavigationDirection direction, ItemNavigateArgs itemNavigateArgs)
+   在 System.Windows.Controls.ListBox.OnKeyDown(KeyEventArgs e)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   在 System.Windows.Input.InputManager.ProcessStagingArea()
+   在 System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawKeyboardActions actions, Int32 scanCode, Boolean isExtendedKey, Boolean isSystemKey, Int32 virtualKey)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ProcessKeyAction(MSG& msg, Boolean& handled)
+   在 System.Windows.Interop.HwndSource.CriticalTranslateAccelerator(MSG& msg, ModifierKeys modifiers)
+   在 System.Windows.Interop.HwndSource.OnPreprocessMessage(Object param)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-10 09:18:56,955 [ 9] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“AccountListView”的控件“System.Windows.Controls.ListView Items.Count:12”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 12 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.Controls.ItemsControl.NavigateByLineInternal(Object startingItem, FocusNavigationDirection direction, FrameworkElement startingElement, ItemNavigateArgs itemNavigateArgs, Boolean shouldFocus, FrameworkElement& container)
+   在 System.Windows.Controls.ItemsControl.NavigateByLine(ItemInfo startingInfo, FrameworkElement startingElement, FocusNavigationDirection direction, ItemNavigateArgs itemNavigateArgs)
+   在 System.Windows.Controls.ItemsControl.NavigateByLine(FocusNavigationDirection direction, ItemNavigateArgs itemNavigateArgs)
+   在 System.Windows.Controls.ListBox.OnKeyDown(KeyEventArgs e)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   在 System.Windows.Input.InputManager.ProcessStagingArea()
+   在 System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawKeyboardActions actions, Int32 scanCode, Boolean isExtendedKey, Boolean isSystemKey, Int32 virtualKey)
+   在 System.Windows.Interop.HwndKeyboardInputProvider.ProcessKeyAction(MSG& msg, Boolean& handled)
+   在 System.Windows.Interop.HwndSource.CriticalTranslateAccelerator(MSG& msg, ModifierKeys modifiers)
+   在 System.Windows.Interop.HwndSource.OnPreprocessMessage(Object param)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 System.Windows.Threading.Dispatcher.Invoke(DispatcherPriority priority, Delegate method, Object arg)
+   在 System.Windows.Interop.HwndSource.OnPreprocessMessageThunk(MSG& msg, Boolean& handled)
+   在 System.Windows.Interop.ComponentDispatcherThread.RaiseThreadMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.TranslateAndDispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-10 09:19:55,267 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 09:23:30,029 [10] INFO  ProjectDemo.App: Start
+2015-03-10 09:24:26,974 [10] INFO  ProjectDemo.App: Start
+2015-03-10 09:26:19,000 [10] INFO  ProjectDemo.App: Start
+2015-03-10 09:41:23,102 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 10:15:29,949 [10] INFO  ProjectDemo.App: Start
+2015-03-10 10:42:01,061 [10] INFO  ProjectDemo.App: Start
+2015-03-10 11:06:51,277 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 11:08:58,814 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 11:11:09,860 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 11:21:26,178 [ 8] INFO  ProjectDemo.App: Start
+2015-03-10 11:25:44,267 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 11:26:14,049 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 11:39:53,651 [11] INFO  ProjectDemo.App: Start
+2015-03-10 11:53:12,004 [ 8] INFO  ProjectDemo.App: Start
+2015-03-10 11:53:31,927 [10] INFO  ProjectDemo.App: Start
+2015-03-10 11:53:49,733 [10] INFO  ProjectDemo.App: Start
+2015-03-10 13:07:50,874 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 14:02:44,259 [10] INFO  ProjectDemo.App: Start
+2015-03-10 14:05:34,632 [10] INFO  ProjectDemo.App: Start
+2015-03-10 14:06:01,243 [10] INFO  ProjectDemo.App: Start
+2015-03-10 14:22:50,820 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 14:33:57,402 [10] INFO  ProjectDemo.App: Start
+2015-03-10 14:42:51,052 [10] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:3”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 3 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-10 14:42:51,097 [10] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:3”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 3 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-10 16:53:46,610 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:18:25,662 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:20:36,267 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:23:21,194 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:23:46,264 [ 9] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:7”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 4 与实际计数 7 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-10 17:23:46,291 [ 9] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:7”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 4 与实际计数 7 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-10 17:28:29,260 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:28:41,714 [ 9] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:12”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 6 与实际计数 12 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-10 17:28:41,740 [ 9] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:12”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 6 与实际计数 12 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-10 17:51:44,387 [ 9] INFO  ProjectDemo.App: Start
+2015-03-10 17:52:22,031 [10] INFO  ProjectDemo.App: Start

@@ -39,13 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\ERouted.cs" />
-    <Compile Include="ExtendAttribute\AcceptEventAttribute.cs" />
     <Compile Include="Delegate\AccountEventArgs.cs" />
+    <Compile Include="IModuleRoute.cs" />
+    <Compile Include="Model\AcceptEvent.cs" />
     <Compile Include="Model\Permission.cs" />
+    <Compile Include="Model\TokenManager.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="IProjectMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProCommon\ProCommon.csproj">
+      <Project>{fb56ee6d-0894-4525-af65-8c46718e0176}</Project>
+      <Name>ProCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using ProCommon.ProEnum;
 
 namespace ProjectDemo.Model.User
 {
@@ -87,6 +88,11 @@ namespace ProjectDemo.Model.User
             {
                 HeaderChanged(this, new ModulechangedEvengArgs(value));
             }
+        }
+
+        public void SetCurrentModule(EModule module)
+        {
+            
         }
     }
 }

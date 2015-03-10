@@ -1,4 +1,5 @@
-﻿using ProInterface;
+﻿using ProCommon.ProEnum;
+using ProInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,9 @@ namespace ProSogou
         {
             if (null != LoginEvent)
                 LoginEvent(this, e);
-          
+
+           
+
         }
         void ProjectMain_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
@@ -75,11 +78,37 @@ namespace ProSogou
             throw new NotImplementedException();
         }
 
-        public void AcceptRoutedEvent(ProInterface.Enum.ERoutedEvent typf, object arg)
+        public void AcceptRoutedEvent(ERouteEvent typf, object arg)
         {
             throw new NotImplementedException();
         }
 
         public event ProInterface.Delegate.SettingChangedEventHandler SettingChanged;
+
+
+        public Queue<ProInterface.Model.AcceptEvent> AcceptedEvents
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+        public ProInterface.Model.TokenManager PublicToken
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

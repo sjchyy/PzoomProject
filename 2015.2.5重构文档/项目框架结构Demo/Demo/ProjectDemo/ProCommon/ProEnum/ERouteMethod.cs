@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ProInterface.Enum
+namespace ProCommon.ProEnum
 {
-  public enum ERoutedEvent
+    public enum ERouteMethod
     {
-      Null=0,
-      SettingChangedEvent=1
+        DownLoadData,
+        AddPlan,
     }
 }

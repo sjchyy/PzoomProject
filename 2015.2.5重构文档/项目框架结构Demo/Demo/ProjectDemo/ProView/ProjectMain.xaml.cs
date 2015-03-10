@@ -13,24 +13,58 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProInterface.Delegate;
-using ProInterface.Enum;
-using ProInterface.ExtendAttribute;
 using ProInterface.Model;
+using ProCommon.ProEnum;
+using ProCommon.ExtendAttribute;
 
 /// <summary>
     /// ProjectMain.xaml 的交互逻辑
     /// </summary>
-    [AcceptEventAttribute("AcceptRoutedEvent",ERoutedEvent.SettingChangedEvent)]
-    public partial class ProjectMain : UserControl,IProjectMain
+    public partial class ProjectMain : UserControl,IProjectMain,IModuleRoute
     {
         public ProjectMain()
         {
             InitializeComponent();
-            this.Loaded += ProjectMain_Loaded;
+         AcceptedEvents = new Queue<AcceptEvent>();
             this._lsetting = new Setting() { UserList = new List<User>(), Permissions=new List<Permission>() };
-          
+            this.ButtonAdd.Click += ButtonAdd_Click;
+            this.ButtonDelete.Click += ButtonDelete_Click;
+            this.ButtonUpdate.Click += ButtonUpdate_Click;
+            this.ButtonRouteToKeyword.Click += ButtonRouteToKeyword_Click;
+            this.ButtonRouteToDownloadData.Click += ButtonRouteToDownloadData_Click;
+            this.ButtonRouteToAddPlan.Click += ButtonRouteToAddPlan_Click;
+            this.ButtonTokenUpdate.Click += ButtonTokenUpdate_Click;
+            this.Loaded += ProjectMain_Loaded;
+            PublicToken = new TokenManager();
         }
 
+        void ButtonTokenUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            PublicToken.Token += "UPDate";
+        }
+        public TokenManager PublicToken { get; set; }
+        void ButtonRouteToAddPlan_Click(object sender, RoutedEventArgs e)
+        {
+            if (null != ModuleRoutedEvent)
+            {
+                ModuleRoutedEvent(this, new ModuleRoutedEventArgs() { TargetModule = EModule.BaiduEdit, RoutedType = ERouteEvent.MethodRouteEvent, TargetMethod = ERouteMethod.AddPlan });
+            }
+        }
+        void ButtonRouteToDownloadData_Click(object sender, RoutedEventArgs e)
+        {
+            if (null != ModuleRoutedEvent)
+            {
+                ModuleRoutedEvent(this, new ModuleRoutedEventArgs() { TargetModule = EModule.BaiduEdit, RoutedType = ERouteEvent.MethodRouteEvent, TargetMethod = ERouteMethod.DownLoadData });
+            }
+        }
+        void ProjectMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            while (AcceptedEvents.Count > 0)
+            {
+                AcceptEvent item = AcceptedEvents.Dequeue();
+                ExecuteAcceptEvent(item);
+            }
+        }
         private Setting  _lsetting;
 
         public Setting LSetting
@@ -41,12 +75,6 @@ using ProInterface.Model;
 
 
 
-        void ProjectMain_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.ButtonAdd.Click += ButtonAdd_Click;
-            this.ButtonDelete.Click += ButtonDelete_Click;
-            this.ButtonUpdate.Click += ButtonUpdate_Click;
-        }
 
         void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
@@ -68,32 +96,47 @@ using ProInterface.Model;
 
         void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            LSetting.UserList.Add(new User(){UserName = "新增用户"});
+            User use = new User() {UserName = "新增用户"};
+            LSetting.UserList.Add(use);
+
+            this.AccountListView.ItemsSource =new List<User>(LSetting.UserList);
            
             if (null != SettingChanged)
             {
-                SettingChanged(this, new SettingChangedEventArgs() { Config = this._lsetting });
+                SettingChanged(this, new SettingChangedEventArgs() { Config = new Setting(){UserList = new List<User>(){use}} });
             }
         }
 
-        public void AcceptRoutedEvent(ERoutedEvent type,object  arg)
+        public void ExecuteAcceptEvent(AcceptEvent item)
+    {
+        switch (item.EventType)
+        {
+            case ERouteEvent.SettingChangedEvent:
+                Setting set = item.EventArgs as Setting;
+                AccountListView.Items.Clear();
+                for (int i = 0; i < set.UserList.Count; i++)
+                {
+
+                    AccountListView.Items.Add(set.UserList[i].UserName);
+                }
+                break;
+        }
+    }
+
+        
+        public void AcceptRoutedEvent(ERouteEvent type,object  arg)
         {
 
-            switch (type)
-            {
-                  case ERoutedEvent.SettingChangedEvent:
-                    Setting set = arg as Setting;
-                    AccountListView.Items.Clear();
-                    for (int i = 0; i < set.UserList.Count; i++)
-                    {
-
-                        AccountListView.Items.Add(set.UserList[i].UserName);
-                    }
-                    break;
-            }
+            AcceptedEvents.Enqueue(new AcceptEvent() { EventType = type, EventArgs = arg });
  
         }
-
+        void ButtonRouteToKeyword_Click(object sender, RoutedEventArgs e)
+        {
+            if (null != ModuleRoutedEvent)
+            {
+                ModuleRoutedEvent(this,new ModuleRoutedEventArgs(){ TargetModule = EModule.BaiduEdit,  RoutedType = ERouteEvent.WindowRouteEvent, TargetWindow = ERouteWindow.EditKeywordTab});
+            }
+        }
         public bool IsBusy
         {
             get
@@ -122,10 +165,16 @@ using ProInterface.Model;
 
         public void InitSettingAsync(Setting obj)
         {
-            throw new NotImplementedException();
+         
         }
         public event SettingChangedEventHandler SettingChanged;
 
 
-    
+
+
+        public event ModuleRoutedEventHandler ModuleRoutedEvent;
+
+
+        public Queue<AcceptEvent> AcceptedEvents { get; set; }
+
     }

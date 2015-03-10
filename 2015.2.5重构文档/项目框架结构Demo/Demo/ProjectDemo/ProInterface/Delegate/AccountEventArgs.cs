@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows;
+using ProCommon.ProEnum;
 using ProInterface.Model;
 
 namespace ProInterface.Delegate
 {
     public delegate void SettingChangedEventHandler(object sender, SettingChangedEventArgs args);
+
+    public delegate void ModuleRoutedEventHandler(object sender, ModuleRoutedEventArgs args);
+
     public   class SettingChangedEventArgs:RoutedEventArgs
     {
         private Setting _config;
@@ -17,6 +18,14 @@ namespace ProInterface.Delegate
             get { return _config; }
             set { _config = value; }
         }
+    }
+    public class ModuleRoutedEventArgs
+    {
+        public EModule TargetModule { get; set; }
+        public ERouteEvent RoutedType { get; set; }
+        public ERouteWindow TargetWindow { get; set; }
+        public ERouteMethod TargetMethod { get; set; }
+        public object State { get; set; }
     }
     /// <summary>
     /// 全部设置

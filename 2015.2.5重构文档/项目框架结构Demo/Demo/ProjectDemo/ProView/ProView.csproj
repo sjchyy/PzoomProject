@@ -81,6 +81,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProCommon\ProCommon.csproj">
+      <Project>{fb56ee6d-0894-4525-af65-8c46718e0176}</Project>
+      <Name>ProCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProInterface\ProInterface.csproj">
       <Project>{df45233f-1d42-422f-9c34-bc1296c0930a}</Project>
       <Name>ProInterface</Name>

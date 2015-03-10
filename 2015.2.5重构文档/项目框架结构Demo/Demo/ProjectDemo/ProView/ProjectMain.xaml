@@ -12,7 +12,12 @@
             <Button Content="修改" x:Name="ButtonUpdate" HorizontalAlignment="Left" ></Button>
 
             <Button Content="删除" x:Name="ButtonDelete" HorizontalAlignment="Left" ></Button>
-            <ListView x:Name="AccountListView"></ListView>
+            <Button Content="转至百度管理－关键词" x:Name="ButtonRouteToKeyword" HorizontalAlignment="Left" ></Button>
+            <Button Content="调用百度管理－下载数据" x:Name="ButtonRouteToDownloadData" HorizontalAlignment="Left" ></Button>
+            <Button Content="调用百度管理－添加计划" x:Name="ButtonRouteToAddPlan" HorizontalAlignment="Left" ></Button>
+            <Button Content="更新Token" x:Name="ButtonTokenUpdate" HorizontalAlignment="Left" ></Button>
+
+            <ListView x:Name="AccountListView" DisplayMemberPath="UserName" ></ListView>
         </StackPanel>
           
     </Grid>

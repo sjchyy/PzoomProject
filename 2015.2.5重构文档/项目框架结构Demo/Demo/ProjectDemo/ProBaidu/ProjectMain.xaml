@@ -5,8 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel>
-        <Label Content="baidu" Width="100" Height="50" Background="Beige" />
-        <ListBox x:Name="ListBox_Account"  Height="200" Margin="20" />
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" >
+            <Label Content="baidu" Width="100" Height="50" Background="Beige" />
+            <Button Content="显示Token" x:Name="ButtonToken"></Button>
+            <ListBox x:Name="ListBox_Account" DisplayMemberPath="UserName"  Height="200" Margin="20" />
+        </StackPanel>
+        <TabControl x:Name="TabControlMain" Grid.Column="1">
+            <TabItem x:Name="TabItemAccount" Header="账户" ></TabItem>
+            <TabItem x:Name="TabItemPlan" Header="推广计划" ></TabItem>
+            <TabItem x:Name="TabItemGroup" Header="推广组" ></TabItem>
+            <TabItem x:Name="TabItemKeyword" Header="关键词" ></TabItem>
+            <TabItem x:Name="TabItemIdea" Header="创意" ></TabItem>
+        </TabControl>
+    </Grid>
+
 </UserControl>

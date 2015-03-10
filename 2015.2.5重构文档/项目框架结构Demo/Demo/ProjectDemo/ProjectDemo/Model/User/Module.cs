@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ProCommon.ProEnum;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace ProjectDemo.Model.User
@@ -21,12 +22,19 @@ namespace ProjectDemo.Model.User
             set { _enable = value;OnPropertyChanged("Enable"); }
         }
 
-        private string _dllName;
+        private Module _parent;
 
-        public string  DllName
+        public Module Parent
         {
-            get { return _dllName; }
-            set { _dllName = value; OnPropertyChanged("DllName"); }
+            get { return _parent;}
+            set { _parent = value; }
+        }
+        private EModule _moduleName;
+
+        public EModule ModuleName
+        {
+            get { return _moduleName; }
+            set { _moduleName = value; OnPropertyChanged("ModuleName"); }
         }
 
         private List<Module> _children;
