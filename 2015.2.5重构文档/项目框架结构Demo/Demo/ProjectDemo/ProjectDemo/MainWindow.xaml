@@ -3,23 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:ProjectDemo"
              xmlns:convert="clr-namespace:ProCommon.Converter;assembly=ProCommon"
-        xmlns:scr="clr-namespace:UserWindow;assembly=UserWindow"  
-        Title="品众精准大师"  x:Name="UWindow"  BorderBrush="SeaGreen" Height="350" Width="525">
+        xmlns:scr="clr-namespace:UserWindow;assembly=UserWindow"   Style="{DynamicResource MyWindowStyle}"
+        Title="品众精准大师"  x:Name="UWindow"  Height="350" Width="525">
     <scr:UWindow.Resources>
         <convert:CollectionToVisibleConverter x:Key="CollectionToVisibleConverter"></convert:CollectionToVisibleConverter>
         <convert:WindowStateToBoolConverter x:Key="WindowStateToBoolConverter"></convert:WindowStateToBoolConverter>
-        
     </scr:UWindow.Resources>
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto">
     <DockPanel>
+     
         <StackPanel x:Name="HeaderPanel" DockPanel.Dock="Top">
             <Grid>
-            <Label  x:Name="UserHeader" Background="RoyalBlue"></Label>
-                <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" VerticalAlignment="Top">
-                    <Button Content="Min" x:Name="WindowMin"  Style="{DynamicResource WindowMinButtonStyle}" ></Button>
-                    <ToggleButton Content="Max" x:Name="WindowMax"  IsChecked="{Binding ElementName=UWindow,Path=WindowState, Converter={ StaticResource WindowStateToBoolConverter}}" Style="{DynamicResource WindowMaxButtonStyle}"   ></ToggleButton>
-                    <Button Content="Cls" x:Name="WindowCls"  Style="{DynamicResource WindowCloseButtonStyle }"  ></Button>
-                </StackPanel>
-            <Grid>
+                    <Label  x:Name="UserHeader" Background="#22EFDA9A"></Label>
+                    <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
@@ -36,7 +33,7 @@
                 <Label Content="旗舰版" Foreground="White" Grid.Row="3" Grid.Column="1"></Label>
             </Grid>
             <Grid Margin="200,0,0,0">
-                    <ListView VerticalAlignment="Bottom"  x:Name="UserModule"  ItemsSource="{Binding Modules}" SelectedItem="{Binding CurrentModule}"  SelectedValuePath="Children"  BorderThickness="0"  Padding="0" Margin="0" Background="Transparent">
+                    <ListView VerticalAlignment="Bottom"  x:Name="UserModule"  ItemsSource="{Binding MenuItemSource}" SelectedItem="{Binding CurrentFirstMenuItem}"  SelectedValuePath="Children"  BorderThickness="0"  Padding="0" Margin="0" Background="Transparent">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel  Orientation="Horizontal"></StackPanel>
@@ -58,7 +55,7 @@
         </Grid>
             <Grid  Visibility="{Binding ElementName=UserModule ,Path=SelectedValue, Converter={StaticResource CollectionToVisibleConverter} }"  >
                <Border Background="Thistle" ></Border>
-                <ListView Background="Transparent" x:Name="HeaderModule" SelectedItem="{Binding CurrentHeader}" Height="30"   ItemsSource="{Binding ElementName=UserModule,Path=SelectedValue}" >
+                <ListView Background="Transparent" x:Name="HeaderModule" SelectedItem="{Binding CurrentSecondMenuItem}" Height="30"   ItemsSource="{Binding ElementName=UserModule,Path=SelectedValue}" >
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Background="Transparent"  Orientation="Horizontal"></StackPanel>
@@ -81,7 +78,16 @@
         <Grid DockPanel.Dock="Bottom">
     
         </Grid>
-        <Grid x:Name="Grid_Container" Background="AliceBlue" >
+        <Grid x:Name="Grid_Container" Background="#BBFFFFFF" >
         </Grid>
     </DockPanel>
+    </ScrollViewer>
+
+        <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" VerticalAlignment="Top">
+            <Button Content="Min" x:Name="WindowMin"  Style="{DynamicResource WindowMinButtonStyle}" ></Button>
+            <ToggleButton Content="Max" x:Name="WindowMax"  IsChecked="{Binding ElementName=UWindow,Path=WindowState, Converter={ StaticResource WindowStateToBoolConverter}}" Style="{DynamicResource WindowMaxButtonStyle}"   ></ToggleButton>
+            <Button Content="Cls" x:Name="WindowCls"  Style="{DynamicResource WindowCloseButtonStyle }"  ></Button>
+        </StackPanel>
+    </Grid>
+
 </scr:UWindow>

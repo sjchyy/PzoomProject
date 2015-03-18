@@ -48,6 +48,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAdd.xaml.cs">
+      <DependentUpon>AccountAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProjectMain.xaml.cs">
       <DependentUpon>ProjectMain.xaml</DependentUpon>
     </Compile>
@@ -75,6 +78,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AccountAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProjectMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +95,10 @@
     <ProjectReference Include="..\ProInterface\ProInterface.csproj">
       <Project>{df45233f-1d42-422f-9c34-bc1296c0930a}</Project>
       <Name>ProInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowResizer\UserWindow.csproj">
+      <Project>{484a8648-56a6-44a8-ad34-8b7e3e26a41a}</Project>
+      <Name>UserWindow</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

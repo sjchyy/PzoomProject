@@ -1,0 +1,6 @@
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\bin\Debug\ResourceLibrary.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.g.resources
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.dll
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.pdb
+E:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ResourceLibrary\obj\Debug\ResourceLibrary.csprojResolveAssemblyReference.cache

@@ -43,9 +43,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="UserWindow">
-      <HintPath>..\..\..\..\..\..\..\User.Library\UserWindow.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -55,6 +52,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\MenuMain.cs" />
+    <Compile Include="Menu\MenuView.cs" />
+    <Compile Include="Setting\SettingMain.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,14 +69,17 @@
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Common\Assembly.cs" />
+    <Compile Include="Login\LoginMain.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\User\Module.cs" />
-    <Compile Include="Model\User\UserView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,6 +109,14 @@
       <Project>{e5541cd0-7acf-4655-a912-0c9d369348d9}</Project>
       <Name>ProBaidu</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProBiddingBaidu\ProBiddingBaidu.csproj">
+      <Project>{2d4485e4-34bb-4d8d-be94-bf8a5c8d192e}</Project>
+      <Name>ProBiddingBaidu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProBiddingSogou\ProBiddingSogou.csproj">
+      <Project>{03785d94-346b-45c2-8b3c-f01dd08ee936}</Project>
+      <Name>ProBiddingSogou</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProCommon\ProCommon.csproj">
       <Project>{fb56ee6d-0894-4525-af65-8c46718e0176}</Project>
       <Name>ProCommon</Name>
@@ -118,14 +133,23 @@
       <Project>{45d592c4-d568-4538-a571-12ecd661e841}</Project>
       <Name>ProView</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ResourceLibrary\ResouuceLibrary.csproj">
+    <ProjectReference Include="..\ResourceLibrary\ResourceLibrary.csproj">
       <Project>{e7518be0-1bb1-4526-bbbc-886b3b259e1d}</Project>
-      <Name>ResouuceLibrary</Name>
+      <Name>ResourceLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThemeLibrary\ThemeLibrary.csproj">
       <Project>{44cb10a6-fe0f-4e89-b0d5-d0f91565ef17}</Project>
       <Name>ThemeLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WindowResizer\UserWindow.csproj">
+      <Project>{484a8648-56a6-44a8-ad34-8b7e3e26a41a}</Project>
+      <Name>UserWindow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png_slider_Thumb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

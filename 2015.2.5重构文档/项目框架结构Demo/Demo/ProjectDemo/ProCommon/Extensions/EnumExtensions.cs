@@ -31,8 +31,26 @@ namespace ProCommon.Extensions
             return attribute != null ? attribute.DllName : data.ToString();
         }
 
-      
-
+        public static string GetModuleName(this Enum data)
+        {
+            var dataType = data.GetType();
+            var fileInfo = dataType.GetField(data.ToString());
+            if (null == fileInfo)
+                return data.ToString();
+            var customAttributes = fileInfo.GetCustomAttributes(typeof(ModuleAttribute), false);
+            var attribute = (ModuleAttribute)customAttributes.OfType<ModuleAttribute>().FirstOrDefault();
+            return attribute != null ? attribute.Name : data.ToString();
+        }
+        public static string GetModuleParentName(this Enum data)
+        {
+            var dataType = data.GetType();
+            var fileInfo = dataType.GetField(data.ToString());
+            if (null == fileInfo)
+                return data.ToString();
+            var customAttributes = fileInfo.GetCustomAttributes(typeof(ModuleAttribute), false);
+            var attribute = (ModuleAttribute)customAttributes.OfType<ModuleAttribute>().FirstOrDefault();
+            return attribute != null ? attribute.ParentName : null;
+        }
       
        
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Controls;
 using ProInterface;
+using ProInterface.Model;
 
 namespace ProjectDemo.Common
 {

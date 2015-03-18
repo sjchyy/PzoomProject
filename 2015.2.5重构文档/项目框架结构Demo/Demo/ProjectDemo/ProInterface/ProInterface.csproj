@@ -40,10 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delegate\AccountEventArgs.cs" />
+    <Compile Include="ILoginMain.cs" />
     <Compile Include="IModuleRoute.cs" />
+    <Compile Include="ISetting.cs" />
     <Compile Include="Model\AcceptEvent.cs" />
     <Compile Include="Model\Permission.cs" />
-    <Compile Include="Model\TokenManager.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="IProjectMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

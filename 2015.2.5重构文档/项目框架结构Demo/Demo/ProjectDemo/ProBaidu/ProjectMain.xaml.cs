@@ -28,68 +28,70 @@ using ProCommon.ExtendAttribute;
             InitializeComponent();
            this.AcceptedEvents = new Queue<AcceptEvent>();
            this.Loaded += ProjectMain_Loaded;
-            this.ButtonToken.Click += ButtonToken_Click;
-            PublicToken = new TokenManager();
+           this.ButtonToken.Click += ButtonToken_Click;
         }
+    public ILoginMain LoginMain { get; set; }
+    public string UserName { get; set; }
+    public Queue<AcceptEvent> AcceptedEvents { get; set; }
+    public ISetting SettingMain { get; set; }
 
-    public TokenManager PublicToken { get; set; }
     private void ProjectMain_Loaded(object sender, RoutedEventArgs e)
     {
-
         while (AcceptedEvents.Count > 0)
         {
             AcceptEvent item = AcceptedEvents.Dequeue();
             ExecuteAcceptEvent(item);
         }
     }
-
     private void ButtonToken_Click(object sender, RoutedEventArgs e)
     {
-        if (null != PublicToken)
+        if (null != LoginMain)
         {
-            MessageBox.Show(PublicToken.Token);
+            MessageBox.Show(LoginMain.Token);
         }
     }
 
     public void ExecuteAcceptEvent(AcceptEvent item)
     {
-            switch (item.EventType)
-            {
-                case ERouteEvent.SettingChangedEvent:
-                    Setting set = item.EventArgs as Setting;
-                    this.ListBox_Account.ItemsSource = new List<User>(set.UserList);
-                    break;
-                    case ERouteEvent.WindowRouteEvent:
-                    ModuleRoutedEventArgs args = item.EventArgs as ModuleRoutedEventArgs;
-                    SetRoutedWindow(args.TargetWindow);
-                    break;
-            }
+        switch (item.EventType)
+        {
+            case ERouteEvent.SettingChangedEvent:
+                this.ListBox_Account.ItemsSource = new List<User>(this.SettingMain.UserList);
+                break;
+            case ERouteEvent.WindowRouteEvent:
+                ModuleRoutedEventArgs args = item.EventArgs as ModuleRoutedEventArgs;
+                SetRoutedWindow(args.TargetWindow);
+                break;
+        }
     }
 
-        public void AcceptRoutedEvent(ERouteEvent type, object arg)
+    public void AcceptRoutedEvent(ERouteEvent type, object arg)
+    {
+        switch (type)
         {
-            if (type == ERouteEvent.MethodRouteEvent)
-            {
+            case ERouteEvent.MethodRouteEvent:
                 ModuleRoutedEventArgs item = arg as ModuleRoutedEventArgs;
-
                 switch (item.TargetMethod)
                 {
                     case ERouteMethod.DownLoadData:
                         MessageBox.Show("下载账户数据");
                         break;
-                        case ERouteMethod.AddPlan:
+                    case ERouteMethod.AddPlan:
                         MessageBox.Show("添加计划");
                         break;
                 }
-            }
-            else
-            {
+                break;
+            case ERouteEvent.SettingChangedEvent:
                 AcceptedEvents.Enqueue(new AcceptEvent() {EventType = type, EventArgs = arg});
-            }
+                break;
+            case ERouteEvent.WindowRouteEvent:
+                AcceptedEvents.Enqueue(new AcceptEvent() {EventType = type, EventArgs = arg});
+                break;
         }
+    }
+
     void SetRoutedWindow(ERouteWindow win)
     {
-
         switch (win)
         {
                 case ERouteWindow.EditAccountTab:
@@ -103,53 +105,11 @@ using ProCommon.ExtendAttribute;
                 break;
         }
     }
-        public bool IsBusy
+        public void InitSettingAsync()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            ListBox_Account.ItemsSource = new List<User>(this.SettingMain.UserList);
         }
 
 
-        public void InitSettingAsyncCancel(object state)
-        {
-            throw new NotImplementedException();
-        }
-        public event System.ComponentModel.AsyncCompletedEventHandler InitCompleted;
-
-        public event System.ComponentModel.ProgressChangedEventHandler InitProgressChanged;
-
-        public string UserName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-
-        public void InitSettingAsync(Setting obj)
-        {
-            Setting set = obj as Setting;
-
-
-            ListBox_Account.ItemsSource = set.UserList;
-
-        }
-        public event SettingChangedEventHandler SettingChanged;
-
-
-        public Queue<AcceptEvent> AcceptedEvents
-        {
-            get; set;
-        }
+    
     }

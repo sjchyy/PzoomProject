@@ -16,6 +16,7 @@ using ProInterface.Delegate;
 using ProInterface.Model;
 using ProCommon.ProEnum;
 using ProCommon.ExtendAttribute;
+using ProView;
 
 /// <summary>
     /// ProjectMain.xaml 的交互逻辑
@@ -25,8 +26,7 @@ using ProCommon.ExtendAttribute;
         public ProjectMain()
         {
             InitializeComponent();
-         AcceptedEvents = new Queue<AcceptEvent>();
-            this._lsetting = new Setting() { UserList = new List<User>(), Permissions=new List<Permission>() };
+            AcceptedEvents = new Queue<AcceptEvent>();
             this.ButtonAdd.Click += ButtonAdd_Click;
             this.ButtonDelete.Click += ButtonDelete_Click;
             this.ButtonUpdate.Click += ButtonUpdate_Click;
@@ -35,14 +35,27 @@ using ProCommon.ExtendAttribute;
             this.ButtonRouteToAddPlan.Click += ButtonRouteToAddPlan_Click;
             this.ButtonTokenUpdate.Click += ButtonTokenUpdate_Click;
             this.Loaded += ProjectMain_Loaded;
-            PublicToken = new TokenManager();
+            this.ButtonAddPlan.Click += ButtonAddPlan_Click;
         }
+
+        void ButtonAddPlan_Click(object sender, RoutedEventArgs e)
+        {
+            AccountAdd win = new AccountAdd();
+            win.Owner = Application.Current.MainWindow;
+            win.ShowDialog();
+        }
+        public ILoginMain LoginMain { get; set; }
+        public Queue<AcceptEvent> AcceptedEvents { get; set; }
+        public ISetting SettingMain { get; set; }
+
+
+        public event ModuleRoutedEventHandler ModuleRoutedEvent;
 
         void ButtonTokenUpdate_Click(object sender, RoutedEventArgs e)
         {
-            PublicToken.Token += "UPDate";
+            LoginMain.Token += "UPDate";
         }
-        public TokenManager PublicToken { get; set; }
+
         void ButtonRouteToAddPlan_Click(object sender, RoutedEventArgs e)
         {
             if (null != ModuleRoutedEvent)
@@ -65,45 +78,36 @@ using ProCommon.ExtendAttribute;
                 ExecuteAcceptEvent(item);
             }
         }
-        private Setting  _lsetting;
-
-        public Setting LSetting
-        {
-            get{return _lsetting;}
-            set { _lsetting = value; }
-        }
-
-
 
 
         void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            LSetting.UserList[0].UserName += "Editor--";
-            if (null != SettingChanged)
+            this.SettingMain.UserList[0].UserName += "Editor--";
+            if (null != ModuleRoutedEvent)
             {
-                SettingChanged(this, new SettingChangedEventArgs(){ Config =this._lsetting });
+                ModuleRoutedEvent(this, new ModuleRoutedEventArgs(){ RoutedType= ERouteEvent.SettingChangedEvent});
             }
         }
 
         void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            LSetting.UserList.RemoveAt(0);
-            if (null != SettingChanged)
+            SettingMain.UserList.RemoveAt(0);
+            if (null != ModuleRoutedEvent)
             {
-                SettingChanged(this, new SettingChangedEventArgs() { Config = this._lsetting });
+                ModuleRoutedEvent(this, new ModuleRoutedEventArgs() { RoutedType = ERouteEvent.SettingChangedEvent });
             }
         }
 
         void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             User use = new User() {UserName = "新增用户"};
-            LSetting.UserList.Add(use);
+            SettingMain.UserList.Add(use);
 
-            this.AccountListView.ItemsSource =new List<User>(LSetting.UserList);
-           
-            if (null != SettingChanged)
+            this.AccountListView.ItemsSource = new List<User>(SettingMain.UserList);
+
+            if (null != ModuleRoutedEvent)
             {
-                SettingChanged(this, new SettingChangedEventArgs() { Config = new Setting(){UserList = new List<User>(){use}} });
+                ModuleRoutedEvent(this, new ModuleRoutedEventArgs() { RoutedType = ERouteEvent.SettingChangedEvent });
             }
         }
 
@@ -112,14 +116,9 @@ using ProCommon.ExtendAttribute;
         switch (item.EventType)
         {
             case ERouteEvent.SettingChangedEvent:
-                Setting set = item.EventArgs as Setting;
-                AccountListView.Items.Clear();
-                for (int i = 0; i < set.UserList.Count; i++)
-                {
 
-                    AccountListView.Items.Add(set.UserList[i].UserName);
-                }
-                break;
+                AccountListView.ItemsSource = new List<User>(this.SettingMain.UserList);
+               break;
         }
     }
 
@@ -137,44 +136,10 @@ using ProCommon.ExtendAttribute;
                 ModuleRoutedEvent(this,new ModuleRoutedEventArgs(){ TargetModule = EModule.BaiduEdit,  RoutedType = ERouteEvent.WindowRouteEvent, TargetWindow = ERouteWindow.EditKeywordTab});
             }
         }
-        public bool IsBusy
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public void InitSettingAsync(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void InitSettingAsyncCancel(object state)
-        {
-            throw new NotImplementedException();
-        }
-
-        public event System.ComponentModel.AsyncCompletedEventHandler InitCompleted;
-
-        public event System.ComponentModel.ProgressChangedEventHandler InitProgressChanged;
-
-        public void InitSettingAsync(Setting obj)
+        public void InitSettingAsync()
         {
          
         }
-        public event SettingChangedEventHandler SettingChanged;
 
-
-
-
-        public event ModuleRoutedEventHandler ModuleRoutedEvent;
-
-
-        public Queue<AcceptEvent> AcceptedEvents { get; set; }
 
     }

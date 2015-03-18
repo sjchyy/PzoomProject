@@ -10,17 +10,10 @@ namespace ProInterface
 {
    public  interface IProjectMain
     {
-        bool IsBusy { get; set; }
-        TokenManager PublicToken { get; set; }
-        void InitSettingAsync(Setting obj);
-        void InitSettingAsyncCancel(Object state);
+        ILoginMain LoginMain { get; set; }
+        ISetting SettingMain { get; set; }
+        void InitSettingAsync();
         Queue<AcceptEvent> AcceptedEvents { get; set; }
         void AcceptRoutedEvent(ERouteEvent typf,object arg);
-        event SettingChangedEventHandler SettingChanged;
-        event AsyncCompletedEventHandler InitCompleted;
-        event ProgressChangedEventHandler InitProgressChanged;
-      
-       
-
     }
 }

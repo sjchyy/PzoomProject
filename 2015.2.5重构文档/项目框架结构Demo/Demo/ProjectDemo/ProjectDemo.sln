@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProBiddingSogou", "ProBiddi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProBidding360", "ProBidding360\ProBidding360.csproj", "{44E02525-A0D1-4C13-BD16-CFF55302244E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResouuceLibrary", "ResourceLibrary\ResouuceLibrary.csproj", "{E7518BE0-1BB1-4526-BBBC-886B3B259E1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceLibrary", "ResourceLibrary\ResourceLibrary.csproj", "{E7518BE0-1BB1-4526-BBBC-886B3B259E1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeLibrary", "ThemeLibrary\ThemeLibrary.csproj", "{44CB10A6-FE0F-4E89-B0D5-D0F91565EF17}"
 EndProject
@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProInterface", "ProInterfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCommon", "ProCommon\ProCommon.csproj", "{FB56EE6D-0894-4525-AF65-8C46718E0176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProLogin", "ProLogin\ProLogin.csproj", "{1C2BD9EC-C4F4-4414-9DF2-49213B2C6CB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserWindow", "WindowResizer\UserWindow.csproj", "{484A8648-56A6-44A8-AD34-8B7E3E26A41A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +83,10 @@ Global
 		{FB56EE6D-0894-4525-AF65-8C46718E0176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB56EE6D-0894-4525-AF65-8C46718E0176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB56EE6D-0894-4525-AF65-8C46718E0176}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C2BD9EC-C4F4-4414-9DF2-49213B2C6CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C2BD9EC-C4F4-4414-9DF2-49213B2C6CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C2BD9EC-C4F4-4414-9DF2-49213B2C6CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C2BD9EC-C4F4-4414-9DF2-49213B2C6CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484A8648-56A6-44A8-AD34-8B7E3E26A41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484A8648-56A6-44A8-AD34-8B7E3E26A41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484A8648-56A6-44A8-AD34-8B7E3E26A41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484A8648-56A6-44A8-AD34-8B7E3E26A41A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,9 +35,6 @@ namespace ProSogou
         {
             if (null != LoginEvent)
                 LoginEvent(this, e);
-
-           
-
         }
         void ProjectMain_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
@@ -73,7 +70,7 @@ namespace ProSogou
         public event System.ComponentModel.ProgressChangedEventHandler InitProgressChanged;
 
 
-        public void InitSettingAsync(ProInterface.Delegate.Setting obj)
+        public void InitSettingAsync()
         {
             throw new NotImplementedException();
         }
@@ -82,9 +79,6 @@ namespace ProSogou
         {
             throw new NotImplementedException();
         }
-
-        public event ProInterface.Delegate.SettingChangedEventHandler SettingChanged;
-
 
         public Queue<ProInterface.Model.AcceptEvent> AcceptedEvents
         {
@@ -99,7 +93,20 @@ namespace ProSogou
         }
 
 
-        public ProInterface.Model.TokenManager PublicToken
+        public ILoginMain LoginMain
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+        public ISetting SettingMain
         {
             get
             {

@@ -20,13 +20,9 @@ namespace ProjectDemo
                    _applicationCloseCommandBinding.CanExecute+= UserCanExecute.ApplicationCloseCmdCanExecute;
                    _applicationCloseCommandBinding.Executed += UserExecute.ApplicationCloseCmdExecuted;
                }
-               return _applicationCloseCommandBinding;
-                
+               return _applicationCloseCommandBinding;  
            }
-           
        }
-
-
     }
 
     public  class UserCanExecute

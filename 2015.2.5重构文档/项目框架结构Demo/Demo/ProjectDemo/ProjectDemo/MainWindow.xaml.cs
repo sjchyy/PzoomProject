@@ -14,13 +14,15 @@ using System.Windows.Shapes;
 using ProInterface;
 
 using ProjectDemo.Common;
-using ProjectDemo.Model.User;
 
 using ProInterface.Model;
 using ProCommon.ProEnum;
 using ProCommon.ExtendAttribute;
 using ProInterface.Delegate;
 using ProCommon.Extensions;
+using ProjectDemo.Login;
+using ProjectDemo.Menu;
+using ProjectDemo.Setting;
 
 namespace ProjectDemo
 {
@@ -35,18 +37,30 @@ namespace ProjectDemo
             Wr.addWindowHeader(UserHeader);
             Wr.addWindowMinButton(WindowMin);
             Wr.addWindowCloseButton(WindowCls);
-            PublicToken = new TokenManager();
+            Login = new LoginMain();
+            Menu = new MenuMain();
+            Menu.MenuSource.MenuItemSelectedChanged += MenuSource_MenuItemSelectedChanged;
             _controlDictionary = new Dictionary<EModule, UserControl>();
             _eventsDictionary = new Dictionary<EModule, ERouteEvent>();
-            this._lsetting = new Setting() { UserList = new List<User>(), Permissions = new List<Permission>() };
+            this._lsetting = new SettingMain() { UserList = new List<User>(), Permissons = new List<Permission>() };
             _lsetting.UserList.Add(new User() { UserName = "Init" });
-            this.HeaderPanel.DataContext = GetUserView();
-          
-        }
-        public TokenManager PublicToken { get; set; }
-        private Setting _lsetting;
+            Menu.InitMenuView(new List<EModule>(){EModule.AccountView,EModule.BaiduEdit,EModule.BaiduBidding},"roc@pzoom.com",EModuleLevel.Double );
+            this.HeaderPanel.DataContext = Menu.MenuSource;
 
-        public Setting LSetting
+            Menu.SetCurrentMenu(EModule.AccountView);
+            
+        }
+
+        void MenuSource_MenuItemSelectedChanged(object sender, MenuItemSelectedchangedEvengArgs args)
+        {
+            ModuleChanged(args.Current.Module);
+        }
+        public LoginMain Login { get; set; }
+
+        public MenuMain Menu { get; set; }
+        private SettingMain _lsetting;
+
+        public SettingMain LSetting
         {
             get { return _lsetting; }
             set { _lsetting = value; }
@@ -60,10 +74,6 @@ namespace ProjectDemo
         /// 用于存储暂未执行的事件
         /// </summary>
         private Dictionary<EModule, ERouteEvent> _eventsDictionary;
-        /// <summary>
-        /// 用于存放模块可接受的事件
-        /// </summary>
-        private Dictionary<EModule, ERouteEvent> _eventSource; 
 
          void _ApplicationCloseCmdExecuted(object target, ExecutedRoutedEventArgs e)
         {
@@ -73,137 +83,88 @@ namespace ProjectDemo
          {
              e.CanExecute = true;
          }
-
-        private UserView userView;
-        private UserView GetUserView()
-        {
-            userView  = new UserView();
-            userView.UserName = "sjchyy@163.com";
-            userView.Modules = new List<Module>();
-            userView.Modules.Add(new Module() { Text = "概览", Enable = true, ModuleName = EModule.AccountView });
-            userView.Modules.Add(new Module() { Text = "百度管理", Enable = true, Children = new List<Module>() { new Module() { Text = "物料管理", ModuleName =EModule.BaiduEdit } } });
-            userView.Modules.Add(new Module() { Text = "搜狗管理", Enable = true, Children = new List<Module>() { new Module() { Text = "物料管理" }, new Module() { Text = "搜狗调价" } } });
-            userView.Modules.Add(new Module() { Text = "360管理", Enable = true, Children = new List<Module>() { new Module() { Text = "物料管理" }, new Module() { Text = "360调价" } } });
-            userView.Modules.Add(new Module() { Text = "创意拓展", Enable = true });
-            userView.HeaderChanged += userView_HeaderChanged;
-            userView.ModuleChanged += userView_ModuleChanged;
-            userView.CurrentModule = userView.Modules[0];
-            return userView;
-        }
-
-        private void SetCurrentMenu(EModule type)
-        {
-            switch (type)
-            {
-                    case EModule.AccountView:
-                  
-                    break;
-                    case EModule.BaiduEdit:
-                    userView.CurrentModule = userView.Modules[1];
-                    userView.CurrentHeader = userView.Modules[1].Children[0];
-
-                    break;
-                    case EModule.BaiduBidding:
-
-                    break;
-                    case EModule.SogouBidding:
-
-                    break;
-                    case EModule.SogouEdit:
-
-                    break;
-            }
-        }
-        void userView_ModuleChanged(object sender,  ModulechangedEvengArgs  e)
-        {
-            if (null == e.Current.Children)
-            {
-                ModuleChanged(e.Current.ModuleName);
-            }
-        }
-        /// <summary>
-        /// settingChanged事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        void MainWindow_SettingChanged(object sender, SettingChangedEventArgs args)
-        {
-            this.LSetting.UserList.AddRange(args.Config.UserList);
-            AcceptEventAttribute atts = Attribute.GetCustomAttributes(sender.GetType(), true)[0] as AcceptEventAttribute;
-            string dll = sender.GetType().Assembly.ManifestModule.Name;
-            if (null != atts)
-            {
-                foreach (EModule key in _eventSource.Keys)
-                {
-                    if (key.GetModuleDllName() != dll)
-                    {
-                        ((IProjectMain) _controlDictionary[key]).AcceptRoutedEvent(ERouteEvent.SettingChangedEvent, args);
-                    }
-                }
-            }
-        }
         /// <summary>
         /// 路由事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        void MainWindow_ModuleRoutedEvent(object sender, ModuleRoutedEventArgs args)
+        private void MainWindow_ModuleRoutedEvent(object sender, ModuleRoutedEventArgs args)
         {
-           string dllName = args.TargetModule.GetModuleDllName();
-            if (!string.IsNullOrEmpty(dllName))
+            switch (args.RoutedType)
             {
-               
-                Modulechanged(args.TargetModule, args);
-                ((IProjectMain)_controlDictionary[args.TargetModule]).AcceptRoutedEvent(args.RoutedType, args);
-                SetCurrentMenu(args.TargetModule);
+                case ERouteEvent.SettingChangedEvent:
+                    ///同步主框架存储
+                    string dll = sender.GetType().Assembly.ManifestModule.Name;
+                    foreach (EModule key in _controlDictionary.Keys)
+                    {
+                        if (key.GetModuleDllName() != dll)
+                        {
+                            ((IProjectMain) _controlDictionary[key]).AcceptRoutedEvent(ERouteEvent.SettingChangedEvent,
+                                this.LSetting);
+                        }
+                    }
+                    break;
+                case ERouteEvent.MethodRouteEvent:
+                    if (!_controlDictionary.ContainsKey(args.TargetModule))
+                    {
+                        InitModule(args.TargetModule);
+                    }
+                    ((IProjectMain) _controlDictionary[args.TargetModule]).AcceptRoutedEvent(args.RoutedType, args);
+                    break;
+                case ERouteEvent.WindowRouteEvent:
+                    if (!_controlDictionary.ContainsKey(args.TargetModule))
+                    {
+                        InitModule(args.TargetModule);
+                    }
+                    ((IProjectMain) _controlDictionary[args.TargetModule]).AcceptRoutedEvent(args.RoutedType, args);
+                    Menu.SetCurrentMenu(args.TargetModule);
+                    break;
             }
-            else
-            {
-                MessageBox.Show("该模块正在施工中，敬情期待");
-            }
-
         }
-        void userView_HeaderChanged(object sender, ModulechangedEvengArgs e)
+      private  void ModuleChanged(EModule module)
         {
-            if (null != e.Current && null == e.Current.Children)
-            {
-                ModuleChanged(e.Current.ModuleName);
-            }
+            ModuleChanged(module, null);
         }
-        void ModuleChanged(EModule module)
+      private void ModuleChanged(EModule module, ModuleRoutedEventArgs args)
         {
-            Modulechanged(module, null);
-        }
-        private void Modulechanged(EModule module, ModuleRoutedEventArgs args)
-        {
-
-            string dll = module.GetModuleDllName();
             if (!_controlDictionary.ContainsKey(module))
             {
-                UserControl control = Assembly.InstanceControl(dll);
-                IProjectMain iprojectMain = control as IProjectMain;
-                if (null != iprojectMain)
-                {
-                    iprojectMain.SettingChanged += MainWindow_SettingChanged;
-                    iprojectMain.PublicToken = PublicToken;
-                }
-                IModuleRoute iModuleRoute = control as IModuleRoute;
-                if (null != iModuleRoute)
-                {
-                    iModuleRoute.ModuleRoutedEvent += MainWindow_ModuleRoutedEvent;
-                }
-                _controlDictionary.Add(module, control);
+                InitModule(module);
             }
             if (null == args)
             {
                 Grid_Container.Children.Clear();
                 Grid_Container.Children.Add(_controlDictionary[module]);
-                ((IProjectMain)_controlDictionary[module]).InitSettingAsync(this.LSetting);
             }
             else if (args.RoutedType == ERouteEvent.WindowRouteEvent)
             {
                 Grid_Container.Children.Clear();
                 Grid_Container.Children.Add(_controlDictionary[module]);
+            }
+        }
+
+        private void InitModule(EModule module)
+        {
+            if (!_controlDictionary.ContainsKey(module))
+            {
+                string dll = module.GetModuleDllName();
+                UserControl control = Assembly.InstanceControl(dll);
+                if (null != control)
+                {
+                    IProjectMain iprojectMain = control as IProjectMain;
+                    if (null != iprojectMain)
+                    {
+                        iprojectMain.LoginMain = Login;
+                        iprojectMain.SettingMain = LSetting;
+                    }
+                    IModuleRoute iModuleRoute = control as IModuleRoute;
+                    if (null != iModuleRoute)
+                    {
+                        iModuleRoute.ModuleRoutedEvent += MainWindow_ModuleRoutedEvent;
+                    }
+                    _controlDictionary.Add(module, control);
+                    ((IProjectMain) control).InitSettingAsync();
+                }
             }
         }
     }

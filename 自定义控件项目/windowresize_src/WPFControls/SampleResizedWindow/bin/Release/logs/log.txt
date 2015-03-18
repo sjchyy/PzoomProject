@@ -1,2 +1,12 @@
 2015-03-05 13:58:06,952 [ 9] INFO  SampleResizedWindow.App: Start
 2015-03-09 14:01:47,306 [10] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:23:24,401 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:46:30,597 [10] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:50:07,738 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:51:48,269 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:52:55,092 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 10:53:29,062 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 11:00:39,273 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 13:43:57,395 [ 8] INFO  SampleResizedWindow.App: Start
+2015-03-12 13:45:31,371 [ 9] INFO  SampleResizedWindow.App: Start
+2015-03-12 13:48:58,471 [10] INFO  SampleResizedWindow.App: Start

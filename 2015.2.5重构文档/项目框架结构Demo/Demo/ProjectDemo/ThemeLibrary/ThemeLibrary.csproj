@@ -53,6 +53,16 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResourceLibrary\ResourceLibrary.csproj">
+      <Project>{e7518be0-1bb1-4526-bbbc-886b3b259e1d}</Project>
+      <Name>ResourceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowResizer\UserWindow.csproj">
+      <Project>{484a8648-56a6-44a8-ad34-8b7e3e26a41a}</Project>
+      <Name>UserWindow</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

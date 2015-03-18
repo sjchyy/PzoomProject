@@ -439,3 +439,297 @@
    在 System.Threading.ThreadHelper.ThreadStart()
 2015-03-10 17:51:44,387 [ 9] INFO  ProjectDemo.App: Start
 2015-03-10 17:52:22,031 [10] INFO  ProjectDemo.App: Start
+2015-03-11 11:54:23,557 [ 8] INFO  ProjectDemo.App: Start
+2015-03-11 14:13:18,660 [10] INFO  ProjectDemo.App: Start
+2015-03-11 14:13:30,166 [10] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:11”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 11 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-11 14:13:30,228 [10] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.InvalidOperationException: 某个 ItemsControl 与它的项源不一致。
+  请参见内部异常以获取更多信息。 ---> System.Exception: 针对开发人员的信息(使用文本可视化工具来阅读此内容):
+引发此异常的原因是名为“ListBox_Account”的控件“System.Windows.Controls.ListBox Items.Count:11”的生成器已接收到一个 CollectionChanged 事件序列，这些事件与 Items 集合的当前状态不符。  检测到以下差异:
+  累积计数 1 与实际计数 11 不相同。[累积计数的计算方式为: 上次重置时的计数 + 添加数 - 自上次重置后的删除数。]
+
+以下的一个或多个源可能已引发错误事件:
+     System.Windows.Controls.ItemContainerGenerator
+      System.Windows.Controls.ItemCollection
+       System.Windows.Data.ListCollectionView
+        System.Collections.Generic.List`1[[ProInterface.Model.User, ProInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+(标有星号的源被认为更有可能是问题的根源。)
+
+最常见的原因有: (a)在未引发相应事件的情况下更改了集合或集合的计数，(b)引发的事件使用了错误的索引或项参数。
+
+异常的堆栈跟踪将描述不一致情况是如何检测到的，而不是描述不一致情况是如何发生的。  若要获得更及时的异常，应将生成器上附加的属性“PresentationTraceSources.TraceLevel”设置为值“High”，然后重新运行该方案。  完成此操作的一个方法是，在“即时”窗口中运行与下面的命令类似的命令:
+   System.Diagnostics.PresentationTraceSources.SetTraceLevel(myItemsControl.ItemContainerGenerator, System.Diagnostics.PresentationTraceLevel.High)
+。这会使得在发生每个 CollectionChanged 事件之后运行检测逻辑，因此，这将减慢应用程序的运行速度。
+
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Controls.ItemContainerGenerator.Verify()
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureChild(IItemContainerGenerator& generator, IContainItemStorage& itemStorageProvider, IContainItemStorage& parentItemStorageProvider, Object& parentItem, Boolean& hasUniformOrAverageContainerSizeBeenSet, Double& computedUniformOrAverageContainerSize, Boolean& computedAreContainersUniformlySized, IList& items, Object& item, IList& children, Int32& childIndex, Boolean& visualOrderChanged, Boolean& isHorizontal, Size& childConstraint, Rect& viewport, VirtualizationCacheLength& cacheSize, VirtualizationCacheLengthUnit& cacheUnit, Boolean& foundFirstItemInViewport, Double& firstItemInViewportOffset, Size& stackPixelSize, Size& stackPixelSizeInViewport, Size& stackPixelSizeInCacheBeforeViewport, Size& stackPixelSizeInCacheAfterViewport, Size& stackLogicalSize, Size& stackLogicalSizeInViewport, Size& stackLogicalSizeInCacheBeforeViewport, Size& stackLogicalSizeInCacheAfterViewport, Boolean& mustDisableVirtualization, Boolean isBeforeFirstItem, Boolean isAfterFirstItem, Boolean isAfterLastItem, Boolean skipActualMeasure, Boolean skipGeneration, Boolean& hasBringIntoViewContainerBeenMeasured, Boolean& hasVirtualizingChildren)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverrideImpl(Size constraint, Nullable`1& lastPageSafeOffset, List`1& previouslyMeasuredOffsets, Boolean remeasure)
+   在 System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(Size constraint)
+   在 System.Windows.FrameworkElement.MeasureCore(Size availableSize)
+   在 System.Windows.UIElement.Measure(Size availableSize)
+   在 System.Windows.ContextLayoutManager.UpdateLayout()
+   在 System.Windows.ContextLayoutManager.UpdateLayoutCallback(Object arg)
+   在 System.Windows.Media.MediaContext.FireInvokeOnRenderCallbacks()
+   在 System.Windows.Media.MediaContext.RenderMessageHandlerCore(Object resizedCompositionTarget)
+   在 System.Windows.Media.MediaContext.RenderMessageHandler(Object resizedCompositionTarget)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-11 14:59:08,597 [10] INFO  ProjectDemo.App: Start
+2015-03-11 15:00:16,832 [10] INFO  ProjectDemo.App: Start
+2015-03-11 15:01:57,741 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:33:27,940 [ 8] INFO  ProjectDemo.App: Start
+2015-03-11 17:40:55,759 [10] INFO  ProjectDemo.App: Start
+2015-03-11 17:41:41,272 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:43:21,706 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:44:18,816 [ 8] INFO  ProjectDemo.App: Start
+2015-03-11 17:45:25,526 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:47:32,068 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:48:53,324 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:49:42,421 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:51:39,549 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 17:52:16,575 [10] INFO  ProjectDemo.App: Start
+2015-03-11 17:57:36,389 [10] INFO  ProjectDemo.App: Start
+2015-03-11 17:58:01,816 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:01:53,904 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:02:42,211 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:04:55,586 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:07:16,151 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:10:19,073 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:11:42,287 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:15:51,592 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:31:20,728 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:35:20,777 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:36:29,665 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:38:08,183 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:40:16,450 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:44:08,291 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:46:37,682 [10] INFO  ProjectDemo.App: Start
+2015-03-11 18:51:15,139 [ 9] INFO  ProjectDemo.App: Start
+2015-03-11 18:53:51,182 [10] INFO  ProjectDemo.App: Start
+2015-03-12 09:28:52,353 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 09:33:15,657 [ 8] INFO  ProjectDemo.App: Start
+2015-03-12 09:45:28,846 [10] INFO  ProjectDemo.App: Start
+2015-03-12 09:47:17,817 [10] INFO  ProjectDemo.App: Start
+2015-03-12 09:49:45,678 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:46:01,506 [10] INFO  ProjectDemo.App: Start
+2015-03-12 10:47:26,017 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:49:00,130 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:58:06,268 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:58:52,863 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:58:53,328 [ 9] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.Windows.Markup.XamlParseException: “在类型“ProjectDemo.MainWindow”上未找到匹配的构造函数。可以使用 Arguments 或 FactoryMethod 指令来构造此类型。”，行号为“6”，行位置为“9”。 ---> System.MissingMethodException: 找不到方法:“Void UserWindow.Resizer.addWindowHeader(System.Windows.UIElement)”。
+   在 ProjectDemo.MainWindow..ctor()
+   在 System.Xaml.Schema.XamlTypeInvoker.CreateInstance(Object[] arguments)
+   在 MS.Internal.Xaml.Runtime.ClrObjectRuntime.CreateInstance(XamlType xamlType, Object[] args)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   在 System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   在 System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   在 System.Windows.Application.DoStartup()
+   在 System.Windows.Application.<.ctor>b__1(Object unused)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-12 10:58:53,400 [ 9] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.Windows.Markup.XamlParseException: “在类型“ProjectDemo.MainWindow”上未找到匹配的构造函数。可以使用 Arguments 或 FactoryMethod 指令来构造此类型。”，行号为“6”，行位置为“9”。 ---> System.MissingMethodException: 找不到方法:“Void UserWindow.Resizer.addWindowHeader(System.Windows.UIElement)”。
+   在 ProjectDemo.MainWindow..ctor()
+   在 System.Xaml.Schema.XamlTypeInvoker.CreateInstance(Object[] arguments)
+   在 MS.Internal.Xaml.Runtime.ClrObjectRuntime.CreateInstance(XamlType xamlType, Object[] args)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   在 System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   在 System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   在 System.Windows.Application.DoStartup()
+   在 System.Windows.Application.<.ctor>b__1(Object unused)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-12 10:59:04,524 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 10:59:04,726 [ 9] INFO  ProjectDemo.App: System.Windows.Threading.DispatcherUnhandledExceptionEventArgs===System.Windows.Markup.XamlParseException: “在类型“ProjectDemo.MainWindow”上未找到匹配的构造函数。可以使用 Arguments 或 FactoryMethod 指令来构造此类型。”，行号为“6”，行位置为“9”。 ---> System.MissingMethodException: 找不到方法:“Void UserWindow.Resizer.addWindowHeader(System.Windows.UIElement)”。
+   在 ProjectDemo.MainWindow..ctor()
+   在 System.Xaml.Schema.XamlTypeInvoker.CreateInstance(Object[] arguments)
+   在 MS.Internal.Xaml.Runtime.ClrObjectRuntime.CreateInstance(XamlType xamlType, Object[] args)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   在 System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   在 System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   在 System.Windows.Application.DoStartup()
+   在 System.Windows.Application.<.ctor>b__1(Object unused)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+2015-03-12 10:59:04,747 [ 9] INFO  ProjectDemo.App: System.UnhandledExceptionEventArgs===System.Windows.Markup.XamlParseException: “在类型“ProjectDemo.MainWindow”上未找到匹配的构造函数。可以使用 Arguments 或 FactoryMethod 指令来构造此类型。”，行号为“6”，行位置为“9”。 ---> System.MissingMethodException: 找不到方法:“Void UserWindow.Resizer.addWindowHeader(System.Windows.UIElement)”。
+   在 ProjectDemo.MainWindow..ctor()
+   在 System.Xaml.Schema.XamlTypeInvoker.CreateInstance(Object[] arguments)
+   在 MS.Internal.Xaml.Runtime.ClrObjectRuntime.CreateInstance(XamlType xamlType, Object[] args)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   在 System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   在 System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   在 System.Windows.Application.DoStartup()
+   在 System.Windows.Application.<.ctor>b__1(Object unused)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   在 MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   在 MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   在 System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   在 System.Windows.Application.RunInternal(Window window)
+   在 System.Windows.Application.Run()
+   在 ProjectDemo.App.Main() 位置 e:\GitProject\PzoomProject\2015.2.5重构文档\项目框架结构Demo\Demo\ProjectDemo\ProjectDemo\obj\Debug\App.g.cs:行号 0
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+2015-03-12 11:00:11,398 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:00:20,173 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:02:37,029 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:06:11,071 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:07:15,198 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:09:13,734 [ 8] INFO  ProjectDemo.App: Start
+2015-03-12 11:17:18,287 [11] INFO  ProjectDemo.App: Start
+2015-03-12 11:20:48,446 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:21:07,662 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:26:50,811 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:27:17,987 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:27:45,904 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:34:41,479 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:35:27,548 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:37:02,330 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 11:39:10,217 [10] INFO  ProjectDemo.App: Start
+2015-03-12 11:40:23,393 [10] INFO  ProjectDemo.App: Start
+2015-03-12 13:43:24,784 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 13:49:38,775 [11] INFO  ProjectDemo.App: Start
+2015-03-12 13:50:09,192 [ 8] INFO  ProjectDemo.App: Start
+2015-03-12 13:58:57,638 [ 9] INFO  ProjectDemo.App: Start
+2015-03-12 13:59:17,726 [10] INFO  ProjectDemo.App: Start
+2015-03-12 14:10:57,816 [ 8] INFO  ProjectDemo.App: Start
+2015-03-12 14:26:32,633 [ 8] INFO  ProjectDemo.App: Start
+2015-03-12 14:27:08,834 [10] INFO  ProjectDemo.App: Start
+2015-03-12 16:52:59,843 [10] INFO  ProjectDemo.App: Start
+2015-03-13 17:48:07,267 [ 9] INFO  ProjectDemo.App: Start
+2015-03-13 17:49:46,076 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 09:26:19,007 [ 8] INFO  ProjectDemo.App: Start
+2015-03-16 09:26:43,242 [10] INFO  ProjectDemo.App: Start
+2015-03-16 09:35:43,756 [10] INFO  ProjectDemo.App: Start
+2015-03-16 09:37:43,239 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 09:38:11,702 [10] INFO  ProjectDemo.App: Start
+2015-03-16 09:38:45,641 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 09:52:53,542 [10] INFO  ProjectDemo.App: Start
+2015-03-16 09:53:37,635 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 09:54:35,164 [ 8] INFO  ProjectDemo.App: Start
+2015-03-16 09:55:32,410 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 10:24:52,271 [10] INFO  ProjectDemo.App: Start
+2015-03-16 12:34:23,168 [10] INFO  ProjectDemo.App: Start
+2015-03-16 15:08:18,894 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:33:54,440 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:35:14,275 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:36:56,588 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:38:59,083 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:42:08,303 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 15:56:34,137 [10] INFO  ProjectDemo.App: Start
+2015-03-16 15:58:05,435 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 16:00:30,342 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 16:05:40,854 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 16:16:03,070 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 16:18:07,133 [ 9] INFO  ProjectDemo.App: Start
+2015-03-16 16:19:57,677 [ 8] INFO  ProjectDemo.App: Start
+2015-03-16 16:21:05,880 [ 9] INFO  ProjectDemo.App: Start
+2015-03-18 16:27:37,071 [10] INFO  ProjectDemo.App: Start
+2015-03-18 16:58:54,682 [10] INFO  ProjectDemo.App: Start
+2015-03-18 17:01:14,220 [10] INFO  ProjectDemo.App: Start

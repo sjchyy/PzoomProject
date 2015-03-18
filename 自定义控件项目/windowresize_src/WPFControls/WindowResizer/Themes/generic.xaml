@@ -11,7 +11,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:UWindow}">
-                    <Grid Margin="10">
+                    <Grid Margin="10"  >
                         <Rectangle Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" >
                             <Rectangle.Effect>
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0"/>
@@ -39,7 +39,7 @@
                             <Rectangle Grid.Column="2" Grid.Row="2" Name="PART_BottomRightSizeGrip" Fill="{TemplateBinding BorderBrush}" />
                             <Rectangle Grid.Column="2" Grid.Row="0" Name="PART_TopRightSizeGrip" Fill="{TemplateBinding BorderBrush}" />
                             <Rectangle Grid.Column="0" Grid.Row="2" Name="PART_BottomLeftSizeGrip" Fill="{TemplateBinding BorderBrush}" />
-                            <Grid Grid.Row="1" Background="White" Grid.Column="1">
+                            <Grid Grid.Row="1"  Background="{TemplateBinding Background}"  Grid.Column="1">
                                 <AdornerDecorator>
                                     <ContentPresenter />
                                 </AdornerDecorator>

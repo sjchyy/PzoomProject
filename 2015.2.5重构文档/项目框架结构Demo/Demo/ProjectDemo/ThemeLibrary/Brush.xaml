@@ -41,7 +41,9 @@
         <GradientStop Color="#FFBDCCD7" Offset="1"/>
     </LinearGradientBrush>
     <SolidColorBrush x:Key="Panel_Login_Background_Brush">#FFFFFF</SolidColorBrush>
-
+    
+    <SolidColorBrush x:Key="WindowHeaderBackground">#22EFDA9A</SolidColorBrush>
+    <SolidColorBrush x:Key="WindowBorderground">#FFFF0000</SolidColorBrush>
 
 
 </ResourceDictionary>

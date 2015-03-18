@@ -10,6 +10,7 @@ namespace ProCommon.ProEnum
       Null=0,
       SettingChangedEvent=1,
       WindowRouteEvent = 2,
-      MethodRouteEvent = 4
+      MethodRouteEvent = 4,
+
     }
 }
